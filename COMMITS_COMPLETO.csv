@@ -1,0 +1,298 @@
+Fecha,Dia,Commit,Persona,Archivos,Mensaje
+2025-05-23,Sábado,1,Juan David,.gitignore .env.example package.json tsconfig.json nest-cli.json README.md,chore configuración inicial del proyecto NestJS
+2025-05-23,Sábado,2,Juan David,docker/,feat docker agregar configuración Docker para desarrollo local
+2025-05-23,Sábado,3,Juan David,src/main.ts src/app.module.ts src/app.controller.ts src/app.service.ts,feat core crear módulos de inicio de NestJS
+2025-05-23,Sábado,4,Juan David,src/common/config/,feat config agregar módulo de configuración con validación de entorno
+2025-05-23,Sábado,5,Juan David,src/common/constants/ src/common/decorators/,feat core agregar decoradores personalizados y constantes de seguridad
+2025-05-23,Sábado,6,Juan David,src/common/guards/,feat guards implementar guards de autenticación y autorización
+2025-05-23,Sábado,7,Ricardo Duran,.gitignore angular.json package.json tsconfig.json README.md,chore inicializar proyecto Angular 21 con soporte PWA
+2025-05-23,Sábado,8,Ricardo Duran,src/index.html src/main.ts src/styles.scss,feat core configurar bootstrap de Angular y estilos globales
+2025-05-23,Sábado,9,Ricardo Duran,src/app/app.config.ts src/app/app.routes.ts src/app/app.ts,feat core crear componente raíz y configuración de rutas
+2025-05-23,Sábado,10,Ricardo Duran,src/environments/,feat config agregar archivos de configuración de entorno
+2025-05-23,Sábado,11,Ricardo Duran,src/app/core/models/,feat core agregar modelos de datos core
+2025-05-23,Sábado,12,Jhamil Alcides,src/properties/entities/,feat properties crear entidades de propiedades y relaciones
+2025-05-23,Sábado,13,Jhamil Alcides,src/properties/entities/rental-owner.entity.ts properties.module.ts,feat properties agregar entidad de propietario y módulo
+2025-05-23,Sábado,14,Jhamil Alcides,src/properties/dto/,feat properties agregar DTOs de propiedades con validación
+2025-05-23,Sábado,15,Fabian Ledezma,src/maintenance/entities/,feat maintenance crear entidades de mantenimiento
+2025-05-23,Sábado,16,Fabian Ledezma,src/maintenance/enums/ maintenance.types.ts maintenance.module.ts,feat maintenance agregar enumeraciones y definición de módulo
+2025-05-23,Sábado,17,Fabian Ledezma,src/maintenance/dto/,feat maintenance agregar DTOs de mantenimiento
+2025-05-24,Domingo,18,Juan David,src/auth/auth.module.ts src/auth/dto/,feat auth crear módulo de autenticación y DTOs
+2025-05-24,Domingo,19,Juan David,src/auth/auth.service.ts auth-security.service.ts,feat auth implementar servicios de autenticación y seguridad
+2025-05-24,Domingo,20,Juan David,src/auth/auth.controller.ts jwt.strategy.ts,feat auth agregar controller de autenticación y estrategia JWT
+2025-05-24,Domingo,21,Juan David,src/auth/auth.service.spec.ts auth-security.service.spec.ts,test auth agregar tests unitarios completos para servicios de autenticación
+2025-05-24,Domingo,22,Juan David,src/users/entities/user.entity.ts users.module.ts users.service.ts,feat users crear entidad de usuario y servicio
+2025-05-24,Domingo,23,Ricardo Duran,src/app/core/services/api.service.ts api-http.service.ts,feat core crear capa de servicios API para comunicación HTTP
+2025-05-24,Domingo,24,Ricardo Duran,src/app/core/services/auth.service.ts auth.guard.ts,feat auth implementar servicio de autenticación y guard
+2025-05-24,Domingo,25,Ricardo Duran,src/app/core/interceptors/auth.interceptor.ts,feat core agregar interceptor HTTP para inyección de JWT
+2025-05-24,Domingo,26,Ricardo Duran,src/app/core/models/user.model.ts format.service.ts,feat core agregar modelo de usuario y servicio de formateo
+2025-05-24,Domingo,27,Fabian Ledezma,src/maintenance/maintenance.service.ts maintenance-creation.service.ts,feat maintenance implementar servicios de mantenimiento
+2025-05-24,Domingo,28,Fabian Ledezma,src/maintenance/maintenance-update.service.ts maintenance-stage.service.ts,feat maintenance agregar servicios de actualización y gestión de etapas
+2025-05-24,Domingo,29,Fabian Ledezma,src/maintenance/maintenance.controller.ts src/maintenance/dto/,feat maintenance agregar controller y DTOs de proveedores
+2025-05-24,Domingo,30,Fabian Ledezma,src/maintenance/*.service.spec.ts,test maintenance agregar tests unitarios comprehensivos
+2025-05-25,Lunes,31,Juan David,src/common/tenant/,feat multitenant implementar data source aware de tenants
+2025-05-25,Lunes,32,Juan David,src/common/middleware/tenant-context.middleware.ts,feat multitenant agregar middleware de identificación de tenant
+2025-05-25,Lunes,33,Juan David,src/common/interceptors/tenant-connection.interceptor.ts,feat multitenant agregar interceptor de conexión de tenant
+2025-05-25,Lunes,34,Juan David,src/common/utils/,feat utils agregar funciones utilitarias para slugs e identificadores
+2025-05-25,Lunes,35,Ricardo Duran,src/app/features/auth/login.component.ts,feat auth crear componente de login con validación de formulario
+2025-05-25,Lunes,36,Ricardo Duran,src/app/features/auth/register.component.ts,feat auth crear componente de registro
+2025-05-25,Lunes,37,Ricardo Duran,src/app/features/auth/forgot-password.component.ts,feat auth crear componente de recuperación de contraseña
+2025-05-25,Lunes,38,Jhamil Alcides,src/properties/properties.service.ts property-creation.service.ts,feat properties implementar servicios de propiedades
+2025-05-25,Lunes,39,Jhamil Alcides,src/properties/property-update.service.ts property-addresses.service.ts,feat properties agregar servicios de actualización y direcciones
+2025-05-25,Lunes,40,Jhamil Alcides,src/properties/properties.controller.ts,feat properties agregar controller de propiedades
+2025-05-25,Lunes,41,Fabian Ledezma,src/vendors/ entities/ vendors.service.ts vendors.controller.ts,feat vendors agregar módulo de proveedores de servicios externos
+2025-05-25,Lunes,42,Fabian Ledezma,src/expenses/entities/ enums/ expenses.module.ts,feat expenses crear entidades de gastos y módulo
+2025-05-25,Lunes,43,Fabian Ledezma,src/expenses/dto/,feat expenses agregar DTOs de gastos
+2025-05-25,Lunes,44,Fabian Ledezma,src/expenses/expenses.service.ts expenses.controller.ts,feat expenses implementar servicio y controller de gastos
+2025-05-26,Martes,45,Jhosep Mitico,src/units/entities/unit.entity.ts units.module.ts,feat units crear entidad de unidad y módulo
+2025-05-26,Martes,46,Jhosep Mitico,src/units/dto/,feat units agregar DTOs de unidades
+2025-05-26,Martes,47,Jhosep Mitico,src/units/units.service.ts,feat units implementar servicio de unidades
+2025-05-26,Martes,48,Jhosep Mitico,src/units/units.controller.ts,feat units agregar controller de unidades
+2025-05-26,Martes,49,Jhosep Mitico,src/units/enums/,feat units agregar enumeraciones de unidades
+2025-05-26,Martes,50,Ricardo Duran,src/app/core/services/sidebar.service.ts,feat core agregar servicio de estado de sidebar
+2025-05-26,Martes,51,Ricardo Duran,src/app/shared/layouts/sidebar/,feat layout crear componente sidebar con navegación
+2025-05-26,Martes,52,Ricardo Duran,src/app/shared/layouts/header/,feat layout crear componente header con menú de usuario
+2025-05-26,Martes,53,Ricardo Duran,src/app/shared/layouts/main-layout/,feat layout crear componente layout principal con sidebar y header
+2025-05-26,Martes,54,Jhurguen Ergueta,src/app/core/services/admin/property.service.ts,feat properties crear servicio de propiedades para admin
+2025-05-26,Martes,55,Jhurguen Ergueta,src/app/features/propiedades/propiedades.component.ts,feat properties crear componente de lista de propiedades
+2025-05-26,Martes,56,Jhurguen Ergueta,src/app/features/propiedades/property-detail-admin.component.ts,feat properties crear componente de detalle de propiedad
+2025-05-26,Martes,57,Jhurguen Ergueta,src/app/features/propiedades/property-units/,feat properties crear componente de unidades de propiedad
+2025-05-27,Miércoles,58,Juan David,src/tenants/entities/ tenants.module.ts,feat tenants crear entidad de inquilino y módulo
+2025-05-27,Miércoles,59,Juan David,src/tenants/dto/,feat tenants agregar DTOs de inquilinos
+2025-05-27,Miércoles,60,Juan David,src/tenants/tenants.service.ts,feat tenants implementar servicio de inquilinos
+2025-05-27,Miércoles,61,Juan David,src/tenants/tenants.controller.ts,feat tenants agregar controller de inquilinos
+2025-05-27,Miércoles,62,Juan David,src/tenants/tenants.service.spec.ts,test tenants agregar tests unitarios para servicio de inquilinos
+2025-05-27,Miércoles,63,Fabian Ledezma,src/app/core/models/tenant-user.model.ts,feat tenants agregar modelo de usuario inquilino
+2025-05-27,Miércoles,64,Fabian Ledezma,src/app/features/inquilinos/inquilinos.component.ts,feat tenants crear componente de lista de inquilinos
+2025-05-27,Miércoles,65,Fabian Ledezma,src/app/core/services/tenant/tenant-user.service.ts,feat tenants crear servicio de usuario inquilino
+2025-05-27,Miércoles,66,Jhamil Alcides,src/employees/entities/ employees.module.ts,feat employees crear entidad de empleado y módulo
+2025-05-27,Miércoles,67,Jhamil Alcides,src/employees/dto/,feat employees agregar DTOs de empleados
+2025-05-27,Miércoles,68,Jhamil Alcides,src/employees/employees.service.ts,feat employees implementar servicio de empleados
+2025-05-27,Miércoles,69,Jhamil Alcides,src/employees/employees.controller.ts,feat employees agregar controller de empleados y tests
+2025-05-28,Jueves,70,Jhosep Mitico,src/contracts/entities/ contracts.module.ts,feat contracts crear entidades de contratos y módulo
+2025-05-28,Jueves,71,Jhosep Mitico,src/contracts/dto/,feat contracts agregar DTOs de contratos
+2025-05-28,Jueves,72,Jhosep Mitico,src/contracts/contract-creation.service.ts contract-creation-validation.service.ts,feat contracts implementar servicios de creación de contratos
+2025-05-28,Jueves,73,Jhosep Mitico,src/contracts/contract-update.service.ts contract-renewal.service.ts,feat contracts agregar servicios de actualización y renovación
+2025-05-28,Jueves,74,Jhosep Mitico,src/contracts/contracts.controller.ts,feat contracts agregar controller de contratos
+2025-05-28,Jueves,75,Jhosep Mitico,src/contracts/enums/,feat contracts agregar enumeración de estados de contrato
+2025-05-28,Jueves,76,Jhurguen Ergueta,src/app/core/services/admin/contract.service.ts,feat contracts crear servicio de contratos
+2025-05-28,Jueves,77,Jhurguen Ergueta,src/app/features/contratos/contratos.component.ts,feat contracts crear componente de lista de contratos
+2025-05-28,Jueves,78,Jhurguen Ergueta,src/app/features/contratos/contract-create/,feat contracts crear componente de creación de contrato
+2025-05-28,Jueves,79,Jhurguen Ergueta,src/app/features/contratos/contract-detail/,feat contracts crear componente de detalle de contrato
+2025-05-28,Jueves,80,Jhurguen Ergueta,src/app/core/models/contract.model.ts,feat contracts agregar modelo de contrato
+2025-05-29,Viernes,81,Juan David,src/contract-templates/entities/ contract-templates.module.ts,feat templates crear entidad de plantilla de contrato y módulo
+2025-05-29,Viernes,82,Juan David,src/contract-templates/dto/,feat templates agregar DTOs de plantillas de contrato
+2025-05-29,Viernes,83,Juan David,src/contract-templates/contract-templates.service.ts,feat templates implementar servicio de plantillas de contrato
+2025-05-29,Viernes,84,Juan David,src/contract-templates/contract-templates.controller.ts src/contracts/pdf.service.ts,feat templates agregar controller de plantillas y servicio PDF
+2025-05-29,Viernes,85,Ricardo Duran,src/app/features/dashboard/dashboard.component.ts,feat dashboard crear componente principal de dashboard
+2025-05-29,Viernes,86,Ricardo Duran,src/app/core/services/admin/property.service.ts,feat properties actualizar servicio de propiedades con métodos de dashboard
+2025-05-29,Viernes,87,Ricardo Duran,src/app/core/services/admin/notification.service.ts,feat notifications crear servicio de notificaciones
+2025-05-29,Viernes,88,Ricardo Duran,src/app/features/notifications/notifications.component.ts,feat notifications crear componente de notificaciones
+2025-05-29,Viernes,89,Jhosep Mitico,src/applications/entities/ applications.module.ts,feat applications crear entidades de solicitudes y módulo
+2025-05-29,Viernes,90,Jhosep Mitico,src/applications/enums/,feat applications agregar enumeraciones de estados de solicitudes
+2025-05-29,Viernes,91,Jhosep Mitico,src/applications/dto/,feat applications agregar DTOs de solicitudes
+2025-05-29,Viernes,92,Jhosep Mitico,src/applications/application-creation.service.ts application-status.service.ts,feat applications implementar servicios de solicitudes
+2025-05-29,Viernes,93,Jhosep Mitico,src/applications/applications.controller.ts,feat applications agregar controller de solicitudes
+2025-05-29,Viernes,94,Fabian Ledezma,src/app/core/services/admin/application.service.ts,feat applications crear servicio de solicitudes
+2025-05-29,Viernes,95,Fabian Ledezma,src/app/features/solicitudes/solicitudes.component.ts,feat applications crear componente de lista de solicitudes
+2025-05-29,Viernes,96,Fabian Ledezma,src/app/features/solicitudes/components/application-detail/,feat applications crear componente de detalle de solicitud
+2025-05-30,Sábado,97,Juan David,src/payments/entities/ payments.module.ts,feat payments crear entidad de pago y módulo
+2025-05-30,Sábado,98,Juan David,src/payments/enums/,feat payments agregar enumeraciones de pagos
+2025-05-30,Sábado,99,Juan David,src/payments/dto/,feat payments agregar DTOs de pagos
+2025-05-30,Sábado,100,Juan David,src/payments/payment-creation.service.ts payment-methods.service.ts,feat payments implementar servicios de creación de pagos
+2025-05-30,Sábado,101,Juan David,src/payments/payments.controller.ts,feat payments agregar controller de pagos
+2025-05-30,Sábado,102,Ricardo Duran,src/app/core/services/admin/payment.service.ts,feat payments crear servicio de pagos
+2025-05-30,Sábado,103,Ricardo Duran,src/app/features/pagos/pagos.component.ts,feat payments crear componente de lista de pagos
+2025-05-30,Sábado,104,Ricardo Duran,src/app/core/models/payment.model.ts,feat payments agregar modelo de pago
+2025-05-30,Sábado,105,Ricardo Duran,src/app/shared/pipes/tenant-currency.pipe.ts,feat pipes agregar pipe de moneda con tests
+2025-05-30,Sábado,106,Fabian Ledezma,src/inspections/entities/ inspections.module.ts,feat inspections crear entidades de inspecciones y módulo
+2025-05-30,Sábado,107,Fabian Ledezma,src/inspections/dto/,feat inspections agregar DTOs de inspecciones
+2025-05-30,Sábado,108,Fabian Ledezma,src/inspections/inspections.service.ts,feat inspections implementar servicio de inspecciones
+2025-05-30,Sábado,109,Fabian Ledezma,src/inspections/inspections.controller.ts inspection-pdf.service.ts,feat inspections agregar controller y servicio PDF
+2025-05-30,Sábado,110,Jhurguen Ergueta,src/app/core/models/maintenance-request.model.ts,feat maintenance agregar modelo de solicitud de mantenimiento
+2025-05-30,Sábado,111,Jhurguen Ergueta,src/app/core/services/admin/maintenance.service.ts,feat maintenance crear servicio de mantenimiento
+2025-05-30,Sábado,112,Jhurguen Ergueta,src/app/features/mantenimiento/mantenimiento.component.ts,feat maintenance crear componente de lista de mantenimiento
+2025-05-31,Domingo,113,Ricardo Duran,src/app/features/portal-publico/,feat portal-publico crear estructura del portal público
+2025-05-31,Domingo,114,Ricardo Duran,src/app/features/portal-publico/home/,feat portal-publico crear componente de home del portal público
+2025-05-31,Domingo,115,Ricardo Duran,src/app/features/portal-publico/property-list/,feat portal-publico crear componente de listado de propiedades público
+2025-05-31,Domingo,116,Ricardo Duran,src/app/features/portal-publico/property-detail/,feat portal-publico crear componente de detalle de propiedad público
+2025-05-31,Domingo,117,Ricardo Duran,src/app/features/portal-publico/contact/,feat portal-publico crear componente de contacto
+2025-05-31,Domingo,118,Jhurguen Ergueta,src/app/features/mantenimiento/components/request-detail/,feat maintenance crear componente de detalle de solicitud
+2025-05-31,Domingo,119,Jhurguen Ergueta,src/app/features/mantenimiento/tecnico/,feat maintenance crear módulo de técnico
+2025-05-31,Domingo,120,Juan David,src/notifications/entities/ notifications.module.ts,feat notifications crear entidades de notificaciones y módulo
+2025-05-31,Domingo,121,Juan David,src/notifications/dto/,feat notifications agregar DTOs de notificaciones
+2025-05-31,Domingo,122,Juan David,src/notifications/notifications.service.ts notifications.gateway.ts,feat notifications implementar servicio de notificaciones y gateway
+2025-06-01,Lunes,123,Jhamil Alcides,src/properties/property-lookup.service.ts,feat properties agregar servicio de búsqueda de propiedades
+2025-06-01,Lunes,124,Jhamil Alcides,src/properties/property-search.service.ts,feat properties agregar servicio de búsqueda con full text
+2025-06-01,Lunes,125,Jhamil Alcides,src/properties/property-stats.service.ts,feat properties agregar servicio de estadísticas de propiedades
+2025-06-01,Lunes,126,Jhamil Alcides,src/properties/public-catalog.controller.ts,feat properties agregar controller de catálogo público
+2025-06-01,Lunes,127,Jhosep Mitico,src/payments/processors/stripe.processor.ts,feat payments agregar procesador de pagos Stripe
+2025-06-01,Lunes,128,Jhosep Mitico,src/payments/processors/payu.processor.ts,feat payments agregar procesador PayU
+2025-06-01,Lunes,129,Jhosep Mitico,src/payments/processors/qr-bolivia.processor.ts,feat payments agregar procesador QR Bolivia
+2025-06-01,Lunes,130,Jhosep Mitico,src/payments/payment-processor.factory.ts webhooks/,feat payments agregar factory de procesadores y webhooks
+2025-06-01,Lunes,131,Ricardo Duran,src/app/features/tenant-portal/,feat tenant-portal crear estructura del portal de inquilinos
+2025-06-01,Lunes,132,Ricardo Duran,src/app/features/tenant-portal/layout/tenant-layout.component.ts,feat tenant-portal crear layout del portal de inquilinos
+2025-06-01,Lunes,133,Ricardo Duran,src/app/features/tenant-portal/auth/tenant-login.component.ts,feat tenant-portal crear componente de login de inquilinos
+2025-06-01,Lunes,134,Ricardo Duran,src/app/features/tenant-portal/dashboard/tenant-dashboard.component.ts,feat tenant-portal crear dashboard de inquilinos
+2025-06-02,Martes,135,Fabian Ledezma,src/reservations/entities/ reservations.module.ts,feat reservations crear entidad de reserva y módulo
+2025-06-02,Martes,136,Fabian Ledezma,src/reservations/enums/,feat reservations agregar enumeraciones de reservas
+2025-06-02,Martes,137,Fabian Ledezma,src/reservations/dto/,feat reservations agregar DTOs de reservas
+2025-06-02,Martes,138,Fabian Ledezma,src/reservations/reservations.service.ts reservations.controller.ts,feat reservations implementar servicio y controller de reservas
+2025-06-02,Martes,139,Jhurguen Ergueta,src/app/features/tenant-portal/my-applications/,feat tenant-portal crear componente de mis solicitudes
+2025-06-02,Martes,140,Jhurguen Ergueta,src/app/features/tenant-portal/new-application/,feat tenant-portal crear componente de nueva solicitud
+2025-06-02,Martes,141,Jhurguen Ergueta,src/app/features/tenant-portal/application-wizard/,feat tenant-portal crear wizard de solicitud
+2025-06-02,Martes,142,Jhurguen Ergueta,src/app/features/tenant-portal/documents/tenant-contract-list.component.ts,feat tenant-portal crear componente de lista de contratos
+2025-06-02,Martes,143,Jhurguen Ergueta,src/app/features/tenant-portal/payments/tenant-payments-list.component.ts,feat tenant-portal crear componente de lista de pagos
+2025-06-02,Martes,144,Juan David,src/lifecycle-notifications/,feat lifecycle crear módulo de notificaciones de ciclo de vida
+2025-06-02,Martes,145,Juan David,src/lifecycle-notifications/lifecycle-notifications.cron.ts,feat lifecycle agregar cron job y tests
+2025-06-02,Martes,146,Juan David,src/lifecycle-notifications/lifecycle-external-notification.adapter.ts,feat lifecycle agregar adapter para notificaciones externas
+2025-06-03,Miércoles,147,Jhamil Alcides,src/rental-owners/dto/,feat owners agregar DTOs de propietarios
+2025-06-03,Miércoles,148,Jhamil Alcides,src/rental-owners/rental-owners.service.ts,feat owners implementar servicio de propietarios
+2025-06-03,Miércoles,149,Jhamil Alcides,src/rental-owners/rental-owners.controller.ts,feat owners agregar controller de propietarios
+2025-06-03,Miércoles,150,Jhamil Alcides,src/properties/property-owners.service.ts,feat owners implementar servicio de propietarios de propiedades
+2025-06-03,Miércoles,151,Ricardo Duran,src/app/features/propiedades/property-units/unit-form-dialog/,feat properties crear diálogo de formulario de unidad
+2025-06-03,Miércoles,152,Ricardo Duran,src/app/features/propiedades/property-units/unit-detail-panel/,feat properties crear panel de detalle de unidad
+2025-06-03,Miércoles,153,Ricardo Duran,src/app/shared/pipes/safe.pipe.ts,feat pipes agregar pipe seguro para URLs
+2025-06-03,Miércoles,154,Ricardo Duran,src/app/features/propiedades/property-units/unit-form-dialog/,feat properties actualizar formulario de unidad con validaciones
+2025-06-03,Miércoles,155,Fabian Ledezma,src/app/features/tenant-portal/payments/tenant-create-payment.component.ts,feat tenant-portal crear componente de creación de pago
+2025-06-03,Miércoles,156,Fabian Ledezma,src/app/features/tenant-portal/payments/tenant-qr-generate.component.ts,feat tenant-portal crear componente de generación de QR
+2025-06-03,Miércoles,157,Fabian Ledezma,src/app/features/tenant-portal/payments/tenant-qr-payments-list.component.ts,feat tenant-portal crear componente de lista de pagos QR
+2025-06-04,Jueves,158,Jhosep Mitico,src/billing-cron/,feat billing crear módulo de facturación automática
+2025-06-04,Jueves,159,Jhosep Mitico,src/billing-cron/billing-cron.scheduler.ts,feat billing agregar scheduler y tests
+2025-06-04,Jueves,160,Jhosep Mitico,src/billing-cron/late-fee.calculator.ts,feat billing agregar calculadora de moras
+2025-06-04,Jueves,161,Jhosep Mitico,src/payments/payment-status.service.ts payment-status-notification.service.ts,feat payments agregar servicios de estado de pagos
+2025-06-04,Jueves,162,Jhurguen Ergueta,src/app/features/empleados/components/create-employee-dialog/,feat employees crear diálogo de creación de empleado
+2025-06-04,Jueves,163,Jhurguen Ergueta,src/app/features/empleados/components/employee-panel/,feat employees crear panel de empleado
+2025-06-04,Jueves,164,Jhurguen Ergueta,src/app/features/mantenimiento/tecnico/components/order-detail/,feat maintenance crear componente de detalle de orden para técnico
+2025-06-04,Jueves,165,Jhurguen Ergueta,src/app/features/mantenimiento/tecnico/tecnico-mantenimiento.component.ts,feat maintenance crear componente de mantenimiento para técnico
+2025-06-04,Jueves,166,Ricardo Duran,src/app/features/configuracion/configuracion.component.ts,feat config crear componente de configuración
+2025-06-04,Jueves,167,Ricardo Duran,src/app/features/configuracion/wizard-setup/,feat config crear wizard de configuración inicial
+2025-06-04,Jueves,168,Ricardo Duran,src/app/core/services/admin/tenant-config.service.ts,feat config crear servicio de configuración de tenant
+2025-06-05,Viernes,169,Juan David,src/owner-portal/,feat owner-portal crear módulo de portal de propietarios
+2025-06-05,Viernes,170,Juan David,src/owner-portal/dto/,feat owner-portal agregar DTO de respuesta del portal
+2025-06-05,Viernes,171,Juan David,src/owner-portal/owner-portal.controller.ts,feat owner-portal agregar controller y tests
+2025-06-05,Viernes,172,Juan David,src/owner-statements/,feat statements crear módulo de estados de cuenta de propietarios
+2025-06-05,Viernes,173,Fabian Ledezma,src/blacklist/entities/ blacklist.module.ts,feat blacklist crear entidades de blacklist y módulo
+2025-06-05,Viernes,174,Fabian Ledezma,src/blacklist/enums/ dto/,feat blacklist agregar enumeraciones y DTOs
+2025-06-05,Viernes,175,Fabian Ledezma,src/blacklist/blacklist.service.ts blacklist.controller.ts,feat blacklist implementar servicio y controller
+2025-06-05,Viernes,176,Jhurguen Ergueta,src/app/features/solicitudes/components/approve-dialog/,feat applications crear diálogo de aprobación de solicitud
+2025-06-05,Viernes,177,Jhurguen Ergueta,src/app/features/solicitudes/components/reject-dialog/,feat applications crear diálogo de rechazo de solicitud
+2025-06-05,Viernes,178,Jhurguen Ergueta,src/app/core/services/permissions.service.ts,feat core crear servicio de permisos
+2025-06-06,Sábado,179,Jhamil Alcides,src/tenants/tenant-provisioning.service.ts,feat tenants agregar servicio de provisioning de tenants
+2025-06-06,Sábado,180,Jhamil Alcides,src/tenants/tenant-applications-provisioning.service.ts,feat tenants agregar servicio de provisioning de aplicaciones
+2025-06-06,Sábado,181,Jhamil Alcides,src/tenants/tenant-employees-provisioning.service.ts,feat tenants agregar servicio de provisioning de empleados
+2025-06-06,Sábado,182,Jhamil Alcides,src/tenants/tenant-properties-provisioning.service.ts,feat tenants agregar servicio de provisioning de propiedades
+2025-06-06,Sábado,183,Jhamil Alcides,src/tenants/tenant-config-provisioning.service.ts,feat tenants agregar servicio de provisioning de configuración
+2025-06-06,Sábado,184,Ricardo Duran,src/app/features/portal-publico/navbar/,feat portal-publico crear componente de navegación del portal público
+2025-06-06,Sábado,185,Ricardo Duran,src/app/features/portal-publico/footer/,feat portal-publico crear componente de footer del portal público
+2025-06-06,Sábado,186,Ricardo Duran,src/app/features/portal-publico/public-layout/,feat portal-publico crear layout del portal público
+2025-06-06,Sábado,187,Ricardo Duran,src/app/features/portal-publico/portal-publico.routes.ts,feat portal-publico configurar rutas del portal público
+2025-06-06,Sábado,188,Fabian Ledezma,src/app/features/tenant-portal/maintenance/tenant-create-request.component.ts,feat tenant-portal crear componente de creación de solicitud de mantenimiento
+2025-06-06,Sábado,189,Fabian Ledezma,src/app/features/tenant-portal/maintenance/tenant-maintenance-list.component.ts,feat tenant-portal crear componente de lista de mantenimiento del inquilino
+2025-06-06,Sábado,190,Fabian Ledezma,src/app/features/tenant-portal/maintenance/tenant-request-detail.component.ts,feat tenant-portal crear componente de detalle de solicitud del inquilino
+2025-06-07,Domingo,191,Jhosep Mitico,src/payments/qr/,feat qr crear módulo de pagos QR
+2025-06-07,Domingo,192,Jhosep Mitico,src/payments/qr/dto/,feat qr agregar DTOs de pagos QR
+2025-06-07,Domingo,193,Jhosep Mitico,src/payments/qr/qr-payment.controller.ts,feat qr agregar controller de pagos QR
+2025-06-07,Domingo,194,Jhosep Mitico,src/payments/qr/qr-payment-*.service.ts,feat qr implementar servicios de persistencia y procesamiento QR
+2025-06-07,Domingo,195,Juan David,src/reports/,feat reports crear módulo de reportes
+2025-06-07,Domingo,196,Juan David,src/reports/dto/,feat reports agregar DTOs de reportes
+2025-06-07,Domingo,197,Juan David,src/reports/reports.controller.ts reports-export.service.ts,feat reports agregar controller y servicio de exportación
+2025-06-07,Domingo,198,Ricardo Duran,src/app/features/perfil/admin-perfil.component.ts,feat profile crear componente de perfil de admin
+2025-06-07,Domingo,199,Ricardo Duran,src/app/features/tenant-portal/profile/tenant-profile.component.ts,feat tenant-portal crear componente de perfil de inquilino
+2025-06-08,Lunes,200,Jhurguen Ergueta,src/app/features/contratos/contract-edit/,feat contracts crear componente de edición de contrato
+2025-06-08,Lunes,201,Jhurguen Ergueta,src/app/features/tenant-portal/documents/tenant-contract-detail.component.ts,feat tenant-portal crear componente de detalle de contrato del inquilino
+2025-06-08,Lunes,202,Jhurguen Ergueta,src/app/features/tenant-portal/documents/tenant-documents.component.ts,feat tenant-portal crear componente de documentos del inquilino
+2025-06-08,Lunes,203,Fabian Ledezma,src/app/features/portal-publico/application-form/,feat portal-publico crear formulario de solicitud del portal público
+2025-06-08,Lunes,204,Fabian Ledezma,src/app/features/portal-publico/application-modal/,feat portal-publico crear modal de solicitud
+2025-06-08,Lunes,205,Fabian Ledezma,src/app/features/portal-publico/contact-modal/,feat portal-publico crear modal de contacto
+2025-06-08,Lunes,206,Jhamil Alcides,src/properties/property-public-catalog.service.ts,feat properties agregar servicio de catálogo público
+2025-06-08,Lunes,207,Jhamil Alcides,src/properties/property-public-catalog-query.service.ts,feat properties agregar servicio de query de catálogo público
+2025-06-08,Lunes,208,Jhamil Alcides,src/properties/dto/catalog-*,feat properties agregar DTOs de catálogo público
+2025-06-09,Martes,209,Ricardo Duran,src/app/features/portal-publico/property-map/,feat portal-publico crear componente de mapa de propiedades
+2025-06-09,Martes,210,Ricardo Duran,src/app/features/portal-publico/map-modal/,feat portal-publico crear modal de mapa
+2025-06-09,Martes,211,Ricardo Duran,src/app/features/portal-publico/faq/,feat portal-publico crear componente de FAQ
+2025-06-09,Martes,212,Jhosep Mitico,src/split-payment/,feat split-payment crear módulo de pagos divididos
+2025-06-09,Martes,213,Jhosep Mitico,src/split-payment/split-payment.service.spec.ts,test split-payment agregar tests de pagos divididos
+2025-06-09,Martes,214,Jhosep Mitico,src/owner-statements/owner-statement-pdf.service.ts owner-statements.controller.ts,feat statements agregar servicio PDF y controller de estados de cuenta
+2025-06-09,Martes,215,Juan David,src/audit-logs/,feat audit crear módulo de logs de auditoría
+2025-06-09,Martes,216,Juan David,src/audit-logs/enums/ dto/,feat audit agregar enumeraciones y DTOs de auditoría
+2025-06-09,Martes,217,Juan David,src/audit-logs/audit-logs.controller.ts,feat audit agregar controller y tests de auditoría
+2025-06-10,Miércoles,218,Fabian Ledezma,src/app/features/tenant-portal/messages/,feat tenant-portal crear componente de mensajes del inquilino
+2025-06-10,Miércoles,219,Fabian Ledezma,src/app/core/services/tenant/tenant-message.service.ts,feat tenant-portal crear servicio de mensajes de inquilinos
+2025-06-10,Miércoles,220,Fabian Ledezma,src/app/core/models/message.model.ts,feat core agregar modelo de mensaje
+2025-06-10,Miércoles,221,Jhurguen Ergueta,src/app/features/tenant-portal/notifications/,feat tenant-portal crear componente de notificaciones del inquilino
+2025-06-10,Miércoles,222,Jhurguen Ergueta,src/app/core/services/tenant/tenant-notification.service.ts,feat tenant-portal crear servicio de notificaciones de inquilinos
+2025-06-10,Miércoles,223,Ricardo Duran,src/app/features/portal-publico/about/,feat portal-publico crear componente About
+2025-06-10,Miércoles,224,Ricardo Duran,src/app/features/portal-publico/tenant-register/,feat portal-publico crear componente de registro de inquilinos
+2025-06-11,Jueves,225,Jhamil Alcides,src/properties/property-notifications.service.ts,feat properties agregar servicio de notificaciones de propiedades
+2025-06-11,Jueves,226,Jhamil Alcides,src/properties/property-leads.service.ts,feat properties agregar servicio de leads de propiedades
+2025-06-11,Jueves,227,Jhosep Mitico,src/payments/payment-refunds.service.ts,feat payments agregar servicio de reembolsos
+2025-06-11,Jueves,228,Jhosep Mitico,src/payments/dto/create-refund.dto.ts,feat payments agregar DTO de reembolso
+2025-06-11,Jueves,229,Jhosep Mitico,src/payments/payment-approval.service.ts payment-creation-notification.service.ts,feat payments agregar servicios de aprobación y notificaciones
+2025-06-11,Jueves,230,Juan David,src/common/utils/decimal.transformer.ts,feat utils agregar transformer para decimales
+2025-06-11,Jueves,231,Juan David,src/common/utils/multer.config.ts,feat utils agregar configuración de Multer
+2025-06-12,Viernes,232,Ricardo Duran,src/app/core/sentry/,feat monitoring configurar Sentry para monitoreo de errores
+2025-06-12,Viernes,233,Ricardo Duran,src/app/core/sentry/sentry-error-handler.ts,feat monitoring crear handler de errores de Sentry
+2025-06-12,Viernes,234,Ricardo Duran,src/common/monitoring/,feat monitoring crear servicio de monitoreo de errores
+2025-06-12,Viernes,235,Fabian Ledezma,src/tenant-config/,feat config agregar controller y servicio de configuración de tenant
+2025-06-12,Viernes,236,Fabian Ledezma,src/tenant-config/dto/,feat config agregar DTO de respuesta de configuración
+2025-06-12,Viernes,237,Jhurguen Ergueta,src/app/core/services/language.service.ts,feat core crear servicio de idiomas
+2025-06-12,Viernes,238,Jhurguen Ergueta,src/app/shared/pipes/tenant-date.pipe.ts,feat pipes agregar pipe de fecha con tests
+2025-06-13,Sábado,239,Juan David,src/common/health/,feat health crear módulo de health check
+2025-06-13,Sábado,240,Juan David,src/common/seed/,feat seed crear módulo de seed para desarrollo
+2025-06-13,Sábado,241,Juan David,src/common/production/,feat production crear servicio de verificación de producción
+2025-06-13,Sábado,242,Jhamil Alcides,src/properties/property-ownership-validation.service.ts,feat properties agregar servicio de validación de propiedad
+2025-06-13,Sábado,243,Jhamil Alcides,src/properties/property-details.service.ts,feat properties agregar servicio de detalles de propiedad
+2025-06-13,Sábado,244,Ricardo Duran,src/app/features/componentes/,feat components crear componente de componentes reutilizables
+2025-06-13,Sábado,245,Ricardo Duran,src/app/shared/pipes/safe.pipe.ts,feat pipes actualizar pipe seguro
+2025-06-14,Domingo,246,Jhosep Mitico,src/contracts/contract-signing.service.ts,feat contracts agregar servicio de firma de contratos
+2025-06-14,Domingo,247,Jhosep Mitico,src/contracts/contracts-renewal.service.spec.ts,feat contracts actualizar servicio de renovación con tests
+2025-06-14,Domingo,248,Fabian Ledezma,src/app/features/tenant-portal/dialogs/contract-signing-dialog/,feat tenant-portal crear diálogo de firma de contrato
+2025-06-14,Domingo,249,Fabian Ledezma,src/app/features/tenant-portal/dialogs/signing-success-dialog/,feat tenant-portal crear diálogo de éxito de firma
+2025-06-14,Domingo,250,Jhurguen Ergueta,src/app/core/services/slug.service.ts,feat core crear servicio de slugs
+2025-06-14,Domingo,251,Jhurguen Ergueta,src/app/features/tenant-portal/home-pre-contract/,feat tenant-portal crear componente home pre-contrato
+2025-06-15,Lunes,252,Juan David,src/common/storage/,feat storage crear módulo de almacenamiento de archivos
+2025-06-15,Lunes,253,Juan David,src/common/storage/storage.controller.ts,feat storage agregar controller de almacenamiento
+2025-06-15,Lunes,254,Juan David,src/payments/payment-webhook.service.ts,feat payments agregar servicio de webhooks de pagos
+2025-06-15,Lunes,255,Ricardo Duran,src/app/features/notifications/,feat notifications actualizar componente de notificaciones
+2025-06-15,Lunes,256,Ricardo Duran,src/app/features/dashboard/,feat dashboard actualizar dashboard con métricas
+2025-06-15,Lunes,257,Ricardo Duran,src/app/core/services/sidebar.service.ts,feat core actualizar servicio de sidebar
+2025-06-15,Lunes,258,Jhurguen Ergueta,src/app/features/empleados/,feat employees actualizar componente de empleados
+2025-06-15,Lunes,259,Jhurguen Ergueta,src/app/features/inquilinos/,feat tenants actualizar componente de inquilinos
+2025-06-16,Martes,260,Jhamil Alcides,src/properties/properties.service.ts,feat properties actualizar servicio de propiedades
+2025-06-16,Martes,261,Jhamil Alcides,src/properties/property-creation.service.ts,feat properties actualizar servicio de creación con tests
+2025-06-16,Martes,262,Jhamil Alcides,src/properties/property-update.service.ts,feat properties actualizar servicio de actualización con tests
+2025-06-16,Martes,263,Jhosep Mitico,src/payments/payment-queries.service.ts,feat payments agregar servicio de queries con tests
+2025-06-16,Martes,264,Jhosep Mitico,src/payments/payment-methods.service.ts,feat payments actualizar servicio de métodos con tests
+2025-06-16,Martes,265,Jhosep Mitico,src/payments/payment-status.service.ts,feat payments actualizar servicio de estados con tests
+2025-06-16,Martes,266,Fabian Ledezma,src/maintenance/maintenance-creation.service.ts,feat maintenance actualizar servicio de creación de mantenimiento
+2025-06-16,Martes,267,Fabian Ledezma,src/maintenance/maintenance-message-notifications.service.ts,feat maintenance agregar servicio de notificaciones de mensajes
+2025-06-17,Miércoles,268,Juan David,docs/,docs agregar documentación de inicio y configuración
+2025-06-17,Miércoles,269,Juan David,docs/modules/,docs agregar documentación de módulos core
+2025-06-17,Miércoles,270,Juan David,docs/modules/,docs agregar documentación de módulos principales
+2025-06-17,Miércoles,271,Juan David,docs/,docs agregar README y documentación de seguridad y testing
+2025-06-17,Miércoles,272,Ricardo Duran,src/styles.scss,style actualizar estilos globales
+2025-06-17,Miércoles,273,Ricardo Duran,src/app/app.scss,style actualizar estilos de la app
+2025-06-17,Miércoles,274,Ricardo Duran,src/app/shared/layouts/,style pulir layouts
+2025-06-17,Miércoles,275,Ricardo Duran,angular.json tsconfig.json,chore actualizar configuración de Angular
+2025-06-17,Miércoles,276,Jhurguen Ergueta,src/app/features/contratos/,feat contracts pulir componentes de contratos
+2025-06-17,Miércoles,277,Jhurguen Ergueta,src/app/features/propiedades/,feat properties pulir componentes de propiedades
+2025-06-17,Miércoles,278,Jhurguen Ergueta,src/app/features/dashboard/,feat dashboard pulir dashboard
+2025-06-18,Jueves,279,Jhosep Mitico,src/applications/applications.service.spec.ts,test applications agregar tests completos de aplicaciones
+2025-06-18,Jueves,280,Jhosep Mitico,src/contracts/contracts.service.spec.ts,test contracts agregar tests completos de contratos
+2025-06-18,Jueves,281,Jhosep Mitico,src/payments/payments.service.spec.ts,test payments agregar tests completos de pagos
+2025-06-18,Jueves,282,Jhosep Mitico,src/,test agregar tests unitarios en módulos faltantes
+2025-06-18,Jueves,283,Fabian Ledezma,src/app/features/tenant-portal/,feat tenant-portal pulir portal de inquilinos
+2025-06-18,Jueves,284,Fabian Ledezma,src/app/core/services/tenant/,feat tenant-portal actualizar servicios de inquilinos
+2025-06-18,Jueves,285,Fabian Ledezma,src/app/features/mantenimiento/,feat maintenance pulir componentes de mantenimiento
+2025-06-18,Jueves,286,Juan David,.env.example .env.production.example,chore actualizar ejemplos de variables de entorno
+2025-06-18,Jueves,287,Juan David,docker/docker-compose.yml,chore actualizar configuración de Docker
+2025-06-19,Viernes,288,Juan David,README.md,docs actualizar README principal con documentación completa
+2025-06-19,Viernes,289,Ricardo Duran,src/app/core/services/,chore verificar y actualizar todos los servicios core
+2025-06-19,Viernes,290,Jhamil Alcides,src/properties/ src/units/ src/tenants/ src/employees/,chore verificar todos los módulos de properties
+2025-06-19,Viernes,291,Jhosep Mitico,src/contracts/ src/applications/ src/payments/,chore verificar todos los módulos de negocio
+2025-06-19,Viernes,292,Jhurguen Ergueta,src/app/features/,chore verificar todos los componentes frontend
+2025-06-19,Viernes,293,Fabian Ledezma,src/maintenance/ src/inspections/ src/expenses/ src/vendors/,chore verificar todos los módulos de operaciones
+2025-06-19,Viernes,294,Juan David,package.json nest-cli.json,chore verificar dependencias y configuración final
+2025-06-19,Viernes,295,Ricardo Duran,package.json angular.json,chore verificar dependencias y configuración frontend
+2025-06-19,Viernes,296,Juan David,.gitignore .eslintrc.json .prettierrc,chore verificar configuración de code quality
+2025-06-19,Viernes,297,TODOS,MERGE FINAL,chore merge final del proyecto versión 1.0.0
