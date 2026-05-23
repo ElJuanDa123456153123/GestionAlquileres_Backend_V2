@@ -214,15 +214,3 @@ docker-compose up -d postgres
 docker build -t gestion-backend:prod .
 docker run -p 3000:3000 gestion-backend:prod
 ```
-
----
-
-## 📄 Licencia
-
-Propiedad de 365Soft - Todos los derechos reservados
-
----
-
-## 👨‍💻 Equipo de Desarrollo
-
-365Soft Bolivia - 2026
