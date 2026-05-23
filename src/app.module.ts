@@ -1,0 +1,152 @@
+import { Module, MiddlewareConsumer, RequestMethod } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ScheduleModule } from '@nestjs/schedule';
+import { APP_GUARD } from '@nestjs/core';
+import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { ConfigModule, ConfigService } from './common/config';
+import { HealthModule } from './common/health/health.module';
+import { TenantsModule } from './tenants/tenants.module';
+import { TenantContextMiddleware } from './common/middleware/tenant-context.middleware';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
+import { PropertiesModule } from './properties/properties.module';
+import { ContractsModule } from './contracts/contracts.module';
+import { MaintenanceModule } from './maintenance/maintenance.module';
+import { NotificationsModule } from './notifications/notifications.module';
+import { ApplicationsModule } from './applications/applications.module';
+import { PaymentsModule } from './payments/payments.module';
+import { QrPaymentModule } from './payments/qr/qr-payment.module';
+import { EmployeesModule } from './employees/employees.module';
+import { TenantConfigModule } from './tenant-config/tenant-config.module';
+import { UnitsModule } from './units/units.module';
+import { RentalOwnersModule } from './rental-owners/rental-owners.module';
+import { OwnerStatementsModule } from './owner-statements/owner-statements.module';
+import { BlacklistModule } from './blacklist/blacklist.module';
+import { DevSeedModule } from './common/seed/dev-seed.module';
+import { StorageModule } from './common/storage/storage.module';
+import { TenantModule } from './common/tenant/tenant.module';
+import { InspectionsModule } from './inspections/inspections.module';
+import { ExpensesModule } from './expenses/expenses.module';
+import { OwnerPortalModule } from './owner-portal/owner-portal.module';
+import { ViolationsModule } from './violations/violations.module';
+import { ReservationsModule } from './reservations/reservations.module';
+import { VendorsModule } from './vendors/vendors.module';
+import { LifecycleNotificationsModule } from './lifecycle-notifications/lifecycle-notifications.module';
+import { BillingCronModule } from './billing-cron/billing-cron.module';
+import { ContractTemplatesModule } from './contract-templates/contract-templates.module';
+import { AuditLogsModule } from './audit-logs/audit-logs.module';
+import { TenantWebsiteModule } from './tenant-website/tenant-website.module';
+import { ReportsModule } from './reports/reports.module';
+import { ProductionReadinessService } from './common/production/production-readiness.service';
+
+@Module({
+  imports: [
+    ConfigModule,
+    HealthModule,
+    ScheduleModule.forRoot(),
+    // Rate Limiting - Protección contra fuerza bruta y DoS
+    ThrottlerModule.forRoot([
+      {
+        name: 'default',
+        ttl: 60000, // 60 segundos
+        limit: 100, // 100 requests por minuto (general)
+      },
+      {
+        name: 'strict',
+        ttl: 60000, // 60 segundos
+        limit: 20, // 20 requests por minuto (endpoints sensibles)
+      },
+    ]),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        type: 'postgres',
+        host: configService.database.host,
+        port: configService.database.port,
+        username: configService.database.username,
+        password: configService.database.password,
+        database: configService.database.database,
+        // IMPORTANTE: Solo sincronizar entidades del schema public (tenant metadata)
+        // Las entidades de tenants (properties, users, maintenance, etc.) se crean automáticamente
+        entities: [
+          __dirname + '/tenants/metadata/*.entity{.ts,.js}',
+          __dirname + '/properties/entities/*.entity{.ts,.js}',
+          __dirname + '/users/*.entity{.ts,.js}',
+          __dirname + '/contracts/entities/*.entity{.ts,.js}',
+          __dirname + '/maintenance/entities/*.entity{.ts,.js}',
+          __dirname + '/notifications/entities/*.entity{.ts,.js}',
+          __dirname + '/applications/entities/*.entity{.ts,.js}',
+          __dirname + '/units/entities/*.entity{.ts,.js}',
+          __dirname + '/owner-statements/entities/*.entity{.ts,.js}',
+          __dirname + '/blacklist/entities/*.entity{.ts,.js}',
+          __dirname + '/expenses/entities/*.entity{.ts,.js}',
+        ],
+        // Sincronizar automáticamente en desarrollo - crea/actualiza tablas desde las entidades
+        synchronize: configService.app.nodeEnv === 'development',
+        logging: (process.env.TYPEORM_LOGGING ?? 'false') === 'true',
+        schema: 'public',
+        // Configurar el search_path por defecto
+        searchPath: 'public',
+      }),
+    }),
+    TenantsModule,
+    AuthModule,
+    UsersModule,
+    PropertiesModule,
+    ContractsModule,
+    MaintenanceModule,
+    NotificationsModule,
+    ApplicationsModule,
+    PaymentsModule,
+    QrPaymentModule,
+    EmployeesModule,
+    TenantConfigModule,
+    UnitsModule,
+    RentalOwnersModule,
+    OwnerStatementsModule,
+    BlacklistModule,
+    DevSeedModule,
+    StorageModule,
+    TenantModule,
+    InspectionsModule,
+    ExpensesModule,
+    OwnerPortalModule,
+    ViolationsModule,
+    ReservationsModule,
+    VendorsModule,
+    LifecycleNotificationsModule,
+    BillingCronModule,
+    ContractTemplatesModule,
+    AuditLogsModule,
+    TenantWebsiteModule,
+    ReportsModule,
+  ],
+  controllers: [AppController],
+  providers: [
+    AppService,
+    ProductionReadinessService,
+    // Guard global de Rate Limiting
+    {
+      provide: APP_GUARD,
+      useClass: ThrottlerGuard,
+    },
+  ],
+})
+export class AppModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer
+      .apply(TenantContextMiddleware)
+      .exclude(
+        // Rutas de health check y endpoints públicos sin tenant
+        { path: 'health', method: RequestMethod.GET },
+        { path: 'auth/register-admin', method: RequestMethod.POST }, // Crear tenant + admin no requiere tenant context
+        // /storage/* se sirve por StorageController con autorización propia
+        { path: 'storage/*path', method: RequestMethod.ALL },
+        // NOTA: auth/:slug/login y auth/:slug/register NO se excluyen porque necesitan detectar el tenant
+      )
+      .forRoutes('*');
+  }
+}
