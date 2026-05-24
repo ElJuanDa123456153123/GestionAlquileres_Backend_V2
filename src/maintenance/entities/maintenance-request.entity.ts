@@ -147,4 +147,5 @@ export class MaintenanceRequest {
 
   @UpdateDateColumn()
   updated_at: Date;
+  
 }
