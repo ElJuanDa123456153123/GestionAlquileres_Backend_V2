@@ -24,3 +24,5 @@ export class RateVendorDto {
   @MaxLength(500)
   comment?: string;
 }
+
+
