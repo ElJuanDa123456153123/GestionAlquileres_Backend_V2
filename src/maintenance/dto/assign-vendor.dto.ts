@@ -23,3 +23,7 @@ export class AssignVendorDto {
   @ValidateIf((o: AssignVendorDto) => !o.vendor_id && !o.assigned_to)
   protected _requiresOne: never;
 }
+
+
+
+
