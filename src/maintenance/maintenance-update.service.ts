@@ -160,5 +160,3 @@ export class MaintenanceUpdateService {
     return error instanceof Error ? error.stack : undefined;
   }
 }
-
-
