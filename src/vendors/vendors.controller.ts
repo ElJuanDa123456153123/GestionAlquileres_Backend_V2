@@ -114,3 +114,4 @@ export class VendorsController {
     return this.vendorsService.getHistory(id);
   }
 }
+
