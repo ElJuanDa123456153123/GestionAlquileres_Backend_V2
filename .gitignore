@@ -69,3 +69,8 @@ claude.md
 /test-payments.sh
 /update_db_password.sh
 /storage/
+
+# Project management and calendar files
+CALENDARIO_COMPLETO_MAYO_JUNIO.md
+COMMITS_COMPLETO.csv
+COMO_HACER_COMMITS.md
