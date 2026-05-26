@@ -64,5 +64,3 @@ export class MaintenanceFiltersDto {
   @IsOptional()
   assigned_to?: number;
 }
-
-

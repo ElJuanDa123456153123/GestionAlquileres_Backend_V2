@@ -31,5 +31,3 @@ export class UpdateMaintenanceDto {
   @IsOptional()
   assigned_to?: number;
 }
-
-
