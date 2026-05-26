@@ -21,3 +21,4 @@ export const ExpenseCategoryLabels: Record<ExpenseCategoryEnum, string> = {
   [ExpenseCategoryEnum.CLEANING]: 'Limpieza',
   [ExpenseCategoryEnum.OTHER]: 'Otros',
 };
+
