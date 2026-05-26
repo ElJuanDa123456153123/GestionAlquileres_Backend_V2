@@ -87,3 +87,4 @@ export class ExpenseFiltersDto {
   @IsOptional()
   limit?: number = 20;
 }
+

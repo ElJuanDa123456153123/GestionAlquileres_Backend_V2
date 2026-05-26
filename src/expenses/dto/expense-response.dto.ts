@@ -59,3 +59,4 @@ export class ExpenseSummaryResponseDto {
   @ApiPropertyOptional({ example: { '7': '400.00' } })
   by_unit?: Record<string, string>;
 }
+
