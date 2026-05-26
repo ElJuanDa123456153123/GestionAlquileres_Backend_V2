@@ -84,3 +84,4 @@ export class CreateVendorDto {
   @IsBoolean()
   is_active?: boolean;
 }
+
