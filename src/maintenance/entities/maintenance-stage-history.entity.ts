@@ -31,5 +31,3 @@ export class MaintenanceStageHistory {
   @CreateDateColumn()
   created_at: Date;
 }
-
-
