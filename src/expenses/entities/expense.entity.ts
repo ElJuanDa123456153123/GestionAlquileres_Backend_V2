@@ -140,3 +140,4 @@ export class Expense {
   @Column({ type: 'int', nullable: true })
   updated_by: number | null;
 }
+
