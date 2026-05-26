@@ -20,5 +20,3 @@ export const TECHNICIAN_ALLOWED_TARGET_STAGES: MaintenanceStage[] = [
   MaintenanceStage.IN_PROGRESS,
   MaintenanceStage.COMPLETED,
 ];
-
-
