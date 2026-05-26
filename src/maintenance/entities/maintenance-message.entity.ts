@@ -40,5 +40,3 @@ export class MaintenanceMessage {
   @CreateDateColumn()
   created_at: Date;
 }
-
-
