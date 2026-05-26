@@ -142,3 +142,4 @@ export class AdminExpensesController {
     return this.expensesService.remove(id);
   }
 }
+
