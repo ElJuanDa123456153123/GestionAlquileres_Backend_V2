@@ -129,5 +129,3 @@ export interface VendorRow {
   id: number;
   is_active: boolean;
 }
-
-
