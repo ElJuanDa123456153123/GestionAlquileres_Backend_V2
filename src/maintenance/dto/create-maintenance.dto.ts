@@ -100,5 +100,3 @@ export class CreateMaintenanceDto {
   @IsOptional()
   contract_id?: number;
 }
-
-

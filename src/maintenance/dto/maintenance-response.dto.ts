@@ -264,5 +264,3 @@ export class MaintenanceActionMessageResponseDto {
   @ApiProperty({ example: 'Solicitud eliminada correctamente' })
   message: string;
 }
-
-
