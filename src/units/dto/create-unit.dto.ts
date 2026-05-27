@@ -14,7 +14,7 @@ import {
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { UnitStatus } from '../enums/unit-status.enum';
 import { RentalType } from '../enums/rental-type.enum';
-
+//validaciones del dto para crear una unidad
 export class CreateUnitDto {
   @ApiProperty({ example: '2A', description: 'Número o código de la unidad' })
   @IsString()
@@ -82,7 +82,7 @@ export class CreateUnitDto {
   @IsPositive()
   deposit_amount?: number;
 
-  // ─── Campos exclusivos de alquiler corto plazo ────────────────────────────
+  // ─── Campos exclusivos de alquiler corto plazo  ────────────────────────────
 
   @ApiPropertyOptional({
     example: 2,
