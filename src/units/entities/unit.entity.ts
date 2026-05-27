@@ -11,7 +11,7 @@ import { Property } from '../../properties/entities/property.entity';
 import { UnitStatus } from '../enums/unit-status.enum';
 import { RentalType } from '../enums/rental-type.enum';
 import { decimalTransformer } from '../../common/utils/decimal.transformer';
-
+//entidades que de las propiedades
 @Entity('units')
 export class Unit {
   @PrimaryGeneratedColumn()
