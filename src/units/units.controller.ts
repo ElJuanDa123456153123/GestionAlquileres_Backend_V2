@@ -39,7 +39,7 @@ import {
 @Roles('ADMIN', 'EMPLEADO')
 export class AdminUnitsController {
   constructor(private readonly unitsService: UnitsService) {}
-
+  //endpoint para listar todas las unidades
   @Get()
   @ApiOperation({ summary: 'Listar unidades de una propiedad' })
   @ApiParam({ name: 'slug', description: 'Tenant slug' })
@@ -51,7 +51,7 @@ export class AdminUnitsController {
   ) {
     return this.unitsService.findByProperty(propertyId);
   }
-
+  //endpoint para listar solo las unidades disponibles
   @Post()
   @ApiOperation({ summary: 'Crear una unidad en una propiedad' })
   @ApiParam({ name: 'slug', description: 'Tenant slug' })
@@ -66,7 +66,7 @@ export class AdminUnitsController {
   ) {
     return this.unitsService.create(propertyId, createUnitDto);
   }
-
+  //endpoint para actualizar una unidad
   @Patch(':unitId')
   @ApiOperation({ summary: 'Actualizar una unidad' })
   @ApiParam({ name: 'slug', description: 'Tenant slug' })
@@ -83,7 +83,7 @@ export class AdminUnitsController {
   ) {
     return this.unitsService.update(propertyId, unitId, updateUnitDto);
   }
-
+  //endpoint para eliminar una unidad (solo si no tiene contratos activos)
   @Delete(':unitId')
   @HttpCode(HttpStatus.OK)
   @ApiOperation({
@@ -103,7 +103,7 @@ export class AdminUnitsController {
     return this.unitsService.remove(propertyId, unitId);
   }
 }
-
+// Controlador publico para listar unidades disponibles sin autenticación
 @ApiTags('Units - Public Catalog')
 @Controller(':slug/catalog/properties/:propertyId/units')
 export class PublicUnitsController {
