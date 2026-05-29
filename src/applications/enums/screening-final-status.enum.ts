@@ -1,5 +1,0 @@
-export enum ScreeningFinalStatus {
-  APPROVED = 'APPROVED',
-  REJECTED = 'REJECTED',
-  REQUIRES_COSIGNER = 'REQUIRES_COSIGNER',
-}
